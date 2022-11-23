@@ -20,15 +20,25 @@
     <div class="cursor-2"></div>
 
     <div id="menu-bars" class="fas fa-bars"></div>
-        
+
+    <div id="theme-toggler" class="fa-solid fa-chevron-down">
+        <div class="theme"></div>
+    </div>
+        <div class="bg">
+            <span style="background: #fcf2e8;"></span>
+            <span style="background: linear-gradient(140deg, white, grey);"></span>
+            <span style="background:linear-gradient(blueviolet, deeppink)"></span>
+            <span style="background:linear-gradient(120deg, coral, blueviolet)"></span>
+            <span style="background:linear-gradient(#999, #111)"></span>
+        </div>
     <header>
-        <a href="#" class="logo">Vo Tuan <span>Huy</span></a>
+        <a href="#home" class="logo">Vo Tuan <span>Huy</span></a>
 
         <nav class="navbar">
             <a href="#home">home</a>
             <a href="#about">about</a>
             <a href="#skills">skills</a>
-            <a href="#experiences">experiences</a>
+            <a href="#edu">experiences</a>
             <a href="#portfolio">portfolio</a>
             <a href="#contact">contact</a>
         </nav>
@@ -70,15 +80,18 @@
                         <p> <span> phone : </span> +84 789833953 </p>
                         <p> <span> email : </span> votuanhuy2910@gmail.com </p>
                         <p> <span> country : </span> vietnamese </p>
-                        <p> <span> experience : </span> 1+ years of experience </p>
+                        <p> <span> experience : </span> < 1 years of experience </p>
                     </div>
                 </div>
-                <a href="#" class="btn">contact me</a>
-                <a href="#" class="btn">hire me</a>
+                <a href="#contact" class="btn">contact me</a>
             </div>
         </div>
         
-        <h1 class="heading"> <span> my </span> skills </h1>
+        <h1 class="heading" id="skills"> 
+            <span> my </span> 
+            skills 
+        </h1>
+
         <div class="row-2">
             <div class="skills">
                 <div class="progress">
@@ -170,8 +183,6 @@
                     <p>ERP software development</p>
                 </div>
             </div>
-    
-            
         </div>
     </section>
 
@@ -181,35 +192,111 @@
         <div class="box-container">
             <div class="box">
                 <img src="/assets/img/AdobePhotoshop.png" alt="">
-                <h3> project 01 </h3>
+                <h3> mp3 project </h3>
+                <p class="description">
+                    Listen to music and relax
+                </p>
                 <div class="icons">
                     <a href="#" class="fas fa-link"></a>
-                    <a href="#" class="fas fa-share"></a>
-                    <a href="#" class="fas fa-search"></a>
+                    <a href="https://mp3-vth.vercel.app" target="_blank" title="Mp3" class="fas fa-share"></a>
+                    <p class="fas fa-eye-slash"></p>
                 </div>
             </div>
     
             <div class="box">
-                <img src="/assets/img/AdobePremierePro.png" alt="">
-                <h3> project 02 </h3>
+                <img src="/assets/img/ecommerce.png" alt="">
+                <h3> e-com project </h3>
+                <p class="description">
+                    Exchange and sell products
+                </p>
                 <div class="icons">
                     <a href="#" class="fas fa-link"></a>
-                    <a href="#" class="fas fa-share"></a>
-                    <a href="#" class="fas fa-search"></a>
+                    <a href="https://ecommerce-vth.vercel.app/" target="_blank" title="Ecommerce" class="fas fa-share"></a>
+                    <p class="fas fa-eye-slash"></p>
                 </div>
             </div>
     
             <div class="box">
-                <img src="/assets/img/html-css-javascript.jpg" alt="">
-                <h3> project 03 </h3>
+                <img src="/assets/img/Blog.png" alt="">
+                <h3> blog project </h3>
+                <p class="description">
+                    Introduce yourself
+                </p>
+                <div class="icons">
+                    <a href="#" target="_blank" class="fas fa-link"></a>
+                    <a href="https://blog-vth.vercel.app" target="_blank" title="Blog" class="fas fa-share"></a>
+                    <p class="fas fa-eye-slash"></p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/assets/img/portfolio.png" alt="">
+                <h3> cv project </h3>
+                <p class="description">
+                    Curriculum vitae
+                </p>
                 <div class="icons">
                     <a href="#" class="fas fa-link"></a>
-                    <a href="#" class="fas fa-share"></a>
-                    <a href="#" class="fas fa-search"></a>
+                    <a href="https://portfolio-vth.vercel.app" target="_blank" title="Portfolio" class="fas fa-share"></a>
+                    <p class="fas fa-eye-slash"></p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="contact">
+        <span class="big-circle"></span>
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title"> contact info </h3>
+                <p class="text"> E-mail: votuanhuy@gmail.com</p>
+                <p class="text"> Mobile: +84 789 833 953</p>
+                <p class="text"> Website: https://portfolio-vth.vercel.app</p>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="" autocomplete="off">
+                    <h3 class="title">contact us</h3>
+
+                    <div class="input-container">
+                        <input type="text" name="name" class="input" />
+                        <label for="">Username</label>
+                        <span>Username</span>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" />
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input" cols="40" rows="5"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+
+                    <input type="submit" value="Send" class="btn-ctn" />
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="credits"> 
+        © copy rights reserved
+        | created by 
+        <span>Vo Tuan Huy</span>
+        | all rights reserved 
+    </div>
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

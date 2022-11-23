@@ -3,6 +3,7 @@
   --mint: #84dcc6;
   --black:#2f323f;
   --grey: grey;
+  --grey-c: #ccc;
   --white: #eeecec;
   --bg-color:#fcf2e8;
   --box-shadow:.4rem .4rem 1rem #ccc,
@@ -31,16 +32,8 @@
 }
 
 *::-webkit-scrollbar {
-    height: .5rem;
-    width: 1rem;
-}
-
-*::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--mint);
+    width: 0;
+    height: 0;
 }
 
 html {
@@ -57,6 +50,8 @@ body {
 section {
   padding: 1rem 5%;
   min-height: 100vh;
+  border: 1px solid var(--grey-c);
+  box-shadow: var(--box-shadow);
 }
 
 .heading {
@@ -85,17 +80,64 @@ section {
   display: none;
 }
 
+#theme-toggler {
+  position: fixed;
+  top: 6.5rem;
+  right: 1rem;
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background-color: var(--mint);
+  text-align: center;
+  color: var(--white);
+  z-index: 10000;
+}
+
+.theme.active {
+  height: 18rem;
+  border-top: 1px solid var(--white);
+}
+
+.bg {
+  position: fixed;
+  top: 9.5rem;
+  right: 3rem;
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 20000;
+}
+
+.bg span {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  display: none;
+  border-radius: 50%;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 0 .5rem rgba(255,255,255,.2),
+              0 1rem 2rem rgba(0,0,0,.4);
+  cursor: pointer;
+  transition: .5s all linear;
+}
+
+.bg.active span {
+  display: block;
+}
+
 .cursor-1 {
     position: absolute;
-    top:0;
-    left:0;
-    height:1rem;
-    width:1rem;
-    background: var(--mint);
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background: var(--grey);
     pointer-events: none;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 10000;
+    z-index: 20000;
 }
 
 .cursor-1.active {
@@ -106,15 +148,15 @@ section {
 
 .cursor-2 {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     height: 4rem;
-    width:4rem;
-    border: .1rem solid var(--mint);
+    width: 4rem;
+    border: .1rem solid var(--grey);
     pointer-events: none;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 10000;
+    z-index: 20000;
     transition: .3s linear;
 }
 
@@ -122,6 +164,7 @@ section {
     display: none;
 }
 
+.btn-ctn,
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -134,9 +177,18 @@ section {
   border-radius: .5rem;
 }
 
+.btn-ctn {
+  box-shadow: var(--box-shadow);
+}
+
+.btn-ctn:hover {
+  background: var(--black);
+}
+
 .btn:hover {
   background:var(--black);
   letter-spacing: .2rem;
+  box-shadow: var(--box-shadow);
 }
 
 header {
@@ -396,7 +448,6 @@ header .share a:hover {
 
 .exp .box-container .box {
   position: relative;
-  flex: 1 1 33rem;
   border-left: .2rem solid var(--mint);
   padding-left: 2rem;
   padding-right: 2rem;
@@ -450,7 +501,7 @@ header .share a:hover {
 }
 
 .portfolio .box-container .box {
-  height: 25rem;
+  height: 30rem;
   position: relative;
   overflow: hidden;
   border: 1rem solid var(--white);
@@ -474,12 +525,19 @@ header .share a:hover {
 }
 
 .portfolio .box-container .box h3 {
-  position: absolute;
-  bottom: .5rem;
-  left: 1rem;
   font-size: 2.5rem;
   color: var(--black);
   text-transform: uppercase;
+}
+
+.portfolio .box-container .box .description {
+  font-size: 1.6rem;
+  color: var(--grey);
+  display: none;
+}
+
+.portfolio .box-container .box .description.active {
+  display: block;
 }
 
 .portfolio .box-container .box .icons {
@@ -488,6 +546,7 @@ header .share a:hover {
   right: 1rem;
 }
 
+.portfolio .box-container .box .icons p,
 .portfolio .box-container .box .icons a {
   display: block;
   height: 4rem;
@@ -499,19 +558,220 @@ header .share a:hover {
   line-height: 4rem;
   text-align: center;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
+.portfolio .box-container .box .icons p:hover,
 .portfolio .box-container .box .icons a:hover {
   background: var(--mint);
   color: var(--white);
 }
 
+#contact {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.form {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  opacity: 0.8;
+}
 
+.contact-form {
+  position: relative;
+  background-color: var(--mint);
+}
 
+.contact-form h3 {
+  font-size: 2.6rem;
+}
 
+.circle {
+  border-radius: 50%;
+  background: linear-gradient(135deg, transparent 20%, #149279);
+  position: absolute;
+}
 
+.circle.one {
+  width: 13rem;
+  height: 13rem;
+  top: 13rem;
+  right: -4rem;
+}
 
+.circle.two {
+  width: 8rem;
+  height: 8rem;
+  top: 1rem;
+  right: 3rem;
+}
+
+.contact-form:before {
+  content: "";
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: var(--mint);
+  transform: rotate(45deg);
+  top: 5rem;
+  left: -1.3rem;
+}
+
+form {
+  padding: 2.3rem 2.2rem;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  text-transform: capitalize;
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--white);
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: var(--white);
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.input-container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.input-container span {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  padding: 0 0.4rem;
+  color: transparent;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.input-container span:before,
+.input-container span:after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: var(--mint);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-container span:before {
+  left: 50%;
+}
+
+.input-container span:after {
+  right: 50%;
+}
+
+.input-container.focus label {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 1.4rem;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+  width: 50%;
+  opacity: 1;
+}
+
+.contact-info {
+  position: relative;
+  margin: 2.3rem 2.2rem;
+}
+
+.contact-info .title {
+  color: var(--mint);
+  font-size: 2.6rem;
+}
+
+.text {
+  color: var(--black);
+  font-size: 1.6rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.contact-info:before {
+  content: "";
+  position: absolute;
+  width: 10.1rem;
+  height: 10rem;
+  border: 22px solid #40D3DC;
+  border-radius: 50%;
+  bottom: -7.7rem;
+  right: 5rem;
+  opacity: 0.3;
+}
+
+.credits {
+  font-size: 2rem;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  color: var(--black);
+}
+
+.credits span {
+  color: var(--mint);
+}
 
 @media (max-width: 991px) {
   html {
@@ -532,6 +792,30 @@ header .share a:hover {
 
   header.active {
     left: 0%;
+    transition: .4s linear;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info:before {
+    bottom: initial;
+    top: -7.5rem;
+    right: 6.5rem;
+    transform: scale(0.95);
+  }
+
+  .contact-form:before {
+    top: -1.3rem;
+    left: initial;
+    right: 7rem;
+  }
+
+  .big-circle {
+    bottom: 75%;
+    transform: scale(0.9) translate(-40%, 30%);
+    right: 50%;
   }
 }
 
@@ -545,4 +829,15 @@ header .share a:hover {
       width: 100%;
   }
 
+  .contact-info:before {
+    display: none;
+  }
+
+  .big-circle {
+    display: none;
+  }
+
+  .input {
+    padding: 0.45rem 1.2rem;
+  }
 }

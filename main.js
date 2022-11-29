@@ -1,45 +1,3 @@
-// let navigationToggle = document.querySelector(".navigationToggle");
-// let navigation = document.querySelector(".navigation");
-// let header = document.querySelector('.header');
-
-// navigationToggle.onclick = () => {
-//     navigation.classList.toggle("active");
-//     header.classList.toggle('active');
-//     document.body.classList.toggle('active');
-
-// };
-
-// window.onscroll = () => {
-//     if (window.innerWidth < 991) {
-//         navigationToggle.classList.remove("active");
-//         header.classList.remove("active");
-//         document.body.classList.remove("active");
-//     }
-
-//     document.querySelectorAll('section').forEach(sec => {
-//         let top = window.scrollY;
-//         let offset = sec.offsetTop - 150;
-//         let height = sec.offsetHeight;
-//         let id = sec.getAttribute('id');
-
-//         if (top >= offset && top < offset + height) {
-//             document.querySelectorAll('.header .navigation ul .list a').forEach(links => {
-//                 links.classList.remove('active');
-//                 document.querySelector('.header .navigation ul list a[href*='+ id +']').classList.add('active')
-//             });
-//         }
-//     })
-// }
-
-// let list = document.querySelectorAll(".list");
-// function activeLink() {
-//     list.forEach((item) => item.classList.remove("active"));
-//     this.classList.add("active");
-// }
-
-// list.forEach((item) => item.addEventListener("click", activeLink));
-
-
 let menu = document.querySelector("#menu-bars");
 let header = document.querySelector("header");
 
@@ -51,6 +9,20 @@ menu.onclick = () => {
 window.onscroll = () => {
     menu.classList.remove("fa-times");
     header.classList.remove("active");
+
+    document.querySelectorAll('section').forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            document.querySelectorAll('header .navbar a').forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header .navbar a[href*='+ id +']').classList.add('active');
+            });
+        }
+    })
 }
 
 let cursor1 = document.querySelector('.cursor-1');
@@ -133,3 +105,15 @@ let themeColor = document.querySelectorAll('.bg span');
         let background = color.style.background;
         document.querySelector('body').style.background = background;
 }));
+
+let mess = document.querySelector('.message');
+
+function copy(text) {
+    document.body.insertAdjacentHTML("beforeend","<div id=\"copy\" contenteditable>"+text+"</div>");
+    document.getElementById("copy").focus();
+    document.execCommand("selectAll");
+    document.execCommand("copy");
+    document.getElementById("copy").remove();
+}
+
+

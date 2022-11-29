@@ -19,94 +19,93 @@
     <div class="cursor-1"></div>
     <div class="cursor-2"></div>
 
-    <div id="menu-bars" class="fas fa-bars"></div>
+    <div id="menu-bars" class="fas fa-bars" data-aos="fade-left"></div>
 
-    <div id="theme-toggler" class="fa-solid fa-chevron-down">
+    <div id="theme-toggler" class="fa-solid fa-chevron-down" data-aos="fade-left">
         <div class="theme"></div>
     </div>
-        <div class="bg">
-            <span style="background: #fcf2e8;"></span>
-            <span style="background: linear-gradient(140deg, white, grey);"></span>
-            <span style="background:linear-gradient(blueviolet, deeppink)"></span>
-            <span style="background:linear-gradient(120deg, coral, blueviolet)"></span>
-            <span style="background:linear-gradient(#999, #111)"></span>
-        </div>
-    <header>
+    <div class="bg">
+        <span style="background: #fcf2e8;"></span>
+        <span style="background: linear-gradient(140deg, white, grey);"></span>
+        <span style="background:linear-gradient(#edede9, #e5e5e5)"></span>
+        <span style="background:linear-gradient(-280deg, #f2e9e4, #ade8f4)"></span>
+    </div>
+
+    <header data-aos="fade-right">
         <a href="#home" class="logo">Vo Tuan <span>Huy</span></a>
 
         <nav class="navbar">
-            <a href="#home">home</a>
+            <a href="#home" class="active">home</a>
             <a href="#about">about</a>
-            <a href="#skills">skills</a>
             <a href="#edu">experiences</a>
             <a href="#portfolio">portfolio</a>
             <a href="#contact">contact</a>
         </nav>
         
         <div class="share">
-            <a href="#" class="fab fa-facebook"></a>
-            <a href="#" class="fab fa-youtube"></a>
-            <a href="#" class="fab fa-github"></a>
+            <a href="https://www.facebook.com/tuanhuy.2910" class="fab fa-facebook" target="_blank" title="Facebook"></a>
+            <a href="https://www.youtube.com/channel/UCq6K4QQNVUs1Zm_7klqGa0g" class="fab fa-youtube" target="_blank" title="YouTube"></a>
+            <a href="https://github.com/votuanhuy2910" class="fab fa-github" target="_blank" title="GitHub"></a>
         </div>
     </header>
 
-    <section class="home" id="home">
+    <section class="home" id="home" data-aos="fade-down">
         <div class="content">
             <span class="hi"> Hi there... </span>
             <h3> i am <span> vo tuan huy </span> </h3>
             <p class="info"> i am a front-end developer </p>
-            <a href="#" class="btn">download CV</a>
+            <a href="/assets/pdf/VO-TUAN-HUY-TopCV-NEW.pdf" class="btn" download>download CV</a>
             <a href="#about" class="btn">about me</a>
         </div>
     </section>
 
     <section class="about" id="about">
-        <h1 class="heading"> about <span> me </span> </h1>
+        <h1 class="heading" data-aos="zoom-in"> about <span> me </span> </h1>
         <div class="row-1">
-            <div class="image">
+            <div class="image" data-aos="fade-right">
                 <img src="/assets/img/avt.jpg" alt="">
             </div>
             <div class="content">
-                <h3> my name is vo tuan huy & i am a front-end developer </h3>
-                <p> I am currently a student majoring in Information Technology at Ho Chi Minh City University of Education </p>
+                <h3 data-aos="fade-left"> my name is vo tuan huy & i am a front-end developer </h3>
+                <p data-aos="fade-left"> I am currently a student majoring in Information Technology at Ho Chi Minh City University of Education </p>
                 <div class="box-container">
-                    <div class="box">
+                    <div class="box" data-aos="fade-down">
                         <p> <span> age : </span> 22 </p>
                         <p> <span> gender : </span> male </p>
                         <p> <span> language : </span> vietnamese, english </p>
                         <p> <span> work : </span> front-end developer </p>
                     </div>
-                    <div class="box">
+                    <div class="box" data-aos="fade-up">
                         <p> <span> phone : </span> +84 789833953 </p>
                         <p> <span> email : </span> votuanhuy2910@gmail.com </p>
                         <p> <span> country : </span> vietnamese </p>
                         <p> <span> experience : </span> < 1 years of experience </p>
                     </div>
                 </div>
-                <a href="#contact" class="btn">contact me</a>
+                <a href="#contact" class="btn" data-aos="fade-right">contact me</a>
             </div>
         </div>
         
-        <h1 class="heading" id="skills"> 
+        <h1 class="heading" data-aos="zoom-in"> 
             <span> my </span> 
             skills 
         </h1>
 
         <div class="row-2">
             <div class="skills">
-                <div class="progress">
+                <div class="progress" data-aos="fade-right">
                     <h3> HTML <span> 95% </span> </h3>
                     <div class="bar"> <span></span> </div>
                 </div>
-                <div class="progress">
+                <div class="progress" data-aos="fade-left">
                     <h3> CSS <span> 80% </span> </h3>
                     <div class="bar"> <span></span> </div>
                 </div>
-                <div class="progress">
+                <div class="progress" data-aos="fade-right">
                     <h3> JavaScript <span> 60% </span> </h3>
                     <div class="bar"> <span></span> </div>
                 </div>
-                <div class="progress">
+                <div class="progress" data-aos="fade-left">
                     <h3> UI/UX Design <span> 75% </span> </h3>
                     <div class="bar"> <span></span> </div>
                 </div>
@@ -115,12 +114,16 @@
     </section>
 
     <section class="edu" id="edu">
-        <h1 class="heading"> my 
+        <h1 class="heading" data-aos="zoom-in-up"> my 
             <span>education</span> 
         </h1>
 
         <div class="box-container">
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="300"
+            >
                 <i class="fas fa-code"></i>
                 <p>(2018 - 2019)</p>
                 <h3>developer</h3>
@@ -128,7 +131,11 @@
                 <p>Basic - C++ / C#</p>
             </div>
     
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="900"
+            >
                 <i class="fas fa-water"></i>
                 <p>(2019 - 2020)</p>
                 <h3>front-end developer</h3>
@@ -136,7 +143,11 @@
                 <p>HTML - CSS - JS</p>
             </div>
     
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            >
                 <i class="fas fa-mobile"></i>
                 <p>(2020 - 2021)</p>
                 <h3>front-end & mobile developer</h3>
@@ -144,7 +155,11 @@
                 <p>HTML - CSS - JS & Flutter</p>
             </div>
 
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            >
                 <i class="fa-solid fa-earth-americas"></i>
                 <p>(2021 - 2022)</p>
                 <h3>web developer</h3>
@@ -152,7 +167,11 @@
                 <p>HTML - CSS - JS & PHP</p>
             </div>
 
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1700"
+            >
                 <i class="fas fa-user-graduate"></i>
                 <p>(2021 - 2022)</p>
                 <h3>graduate</h3>
@@ -163,12 +182,17 @@
     </section>
 
     <section class="exp" id="exp">
-        <h1 class="heading"> my 
-            <span>experiences</span> 
+        <h1 class="heading" data-aos="zoom-in">
+            <span>my</span> 
+            experiences
         </h1>
         
         <div class="box-container">
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            >
                 <div class="content">
                     <span> (6/2022 - 10/2022) </span>
                     <h3>front-end developer internship</h3>
@@ -176,7 +200,11 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            >
                 <div class="content">
                     <span> (2/2022 - 5/2022) </span>
                     <h3>mobile developer internship</h3>
@@ -187,56 +215,76 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-        <h1 class="heading"> <span> my </span> portfolio </h1>
+        <h1 class="heading" data-aos="zoom-in"> 
+            my
+            <span> portfolio </span>
+        </h1>
 
         <div class="box-container">
-            <div class="box">
+            <div class="box"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            >
                 <img src="/assets/img/AdobePhotoshop.png" alt="">
                 <h3> mp3 project </h3>
                 <p class="description">
                     Listen to music and relax
                 </p>
                 <div class="icons">
-                    <a href="#" class="fas fa-link"></a>
+                    <button 
+                    onclick="copy('https://mp3-vth.vercel.app')" class="fas fa-link"></button>
                     <a href="https://mp3-vth.vercel.app" target="_blank" title="Mp3" class="fas fa-share"></a>
                     <p class="fas fa-eye-slash"></p>
                 </div>
             </div>
     
-            <div class="box">
+            <div class="box"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            >
                 <img src="/assets/img/ecommerce.png" alt="">
                 <h3> e-com project </h3>
                 <p class="description">
                     Exchange and sell products
                 </p>
                 <div class="icons">
-                    <a href="#" class="fas fa-link"></a>
-                    <a href="https://ecommerce-vth.vercel.app/" target="_blank" title="Ecommerce" class="fas fa-share"></a>
+                    <button onclick="copy('https://ecommerce-vth.vercel.app')" class="fas fa-link"></button>
+                    <a href="https://ecommerce-vth.vercel.app" target="_blank" title="Ecommerce" class="fas fa-share"></a>
                     <p class="fas fa-eye-slash"></p>
                 </div>
             </div>
     
-            <div class="box">
+            <div class="box"
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            >
                 <img src="/assets/img/Blog.png" alt="">
                 <h3> blog project </h3>
                 <p class="description">
                     Introduce yourself
                 </p>
                 <div class="icons">
-                    <a href="#" target="_blank" class="fas fa-link"></a>
+                    <button onclick="copy('https://blog-vth.vercel.app')" class="fas fa-link"></button>
                     <a href="https://blog-vth.vercel.app" target="_blank" title="Blog" class="fas fa-share"></a>
                     <p class="fas fa-eye-slash"></p>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            >
                 <img src="/assets/img/portfolio.png" alt="">
                 <h3> cv project </h3>
                 <p class="description">
                     Curriculum vitae
                 </p>
                 <div class="icons">
-                    <a href="#" class="fas fa-link"></a>
+                    <button onclick="copy('https://portfolio-vth.vercel.app')" class="fas fa-link"></button>
                     <a href="https://portfolio-vth.vercel.app" target="_blank" title="Portfolio" class="fas fa-share"></a>
                     <p class="fas fa-eye-slash"></p>
                 </div>
@@ -245,48 +293,63 @@
     </section>
 
     <section id="contact">
-        <span class="big-circle"></span>
-        <div class="form">
-            <div class="contact-info">
-                <h3 class="title"> contact info </h3>
-                <p class="text"> E-mail: votuanhuy@gmail.com</p>
-                <p class="text"> Mobile: +84 789 833 953</p>
-                <p class="text"> Website: https://portfolio-vth.vercel.app</p>
-            </div>
+        <h1 class="heading" data-aos="zoom-in"> 
+            <span> contact </span>
+            us 
+        </h1>
 
-            <div class="contact-form">
-                <span class="circle one"></span>
-                <span class="circle two"></span>
-
-                <form action="" autocomplete="off">
-                    <h3 class="title">contact us</h3>
-
-                    <div class="input-container">
-                        <input type="text" name="name" class="input" />
-                        <label for="">Username</label>
-                        <span>Username</span>
-                    </div>
-
-                    <div class="input-container">
-                        <input type="email" name="email" class="input" />
-                        <label for="">Email</label>
-                        <span>Email</span>
-                    </div>
-
-                    <div class="input-container">
-                        <input type="tel" name="phone" class="input" />
-                        <label for="">Phone</label>
-                        <span>Phone</span>
-                    </div>
-
-                    <div class="input-container textarea">
-                        <textarea name="message" class="input" cols="40" rows="5"></textarea>
-                        <label for="">Message</label>
-                        <span>Message</span>
-                    </div>
-
-                    <input type="submit" value="Send" class="btn-ctn" />
-                </form>
+        <div class="contact">
+            <span class="big-circle" data-aos="fade-down"></span>
+            <div class="form">
+                <div class="contact-info"
+                data-aos="fade-right"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+                >
+                    <h3 class="title"> contact info </h3>
+                    <p class="text"> E-mail: votuanhuy@gmail.com</p>
+                    <p class="text"> Mobile: +84 789 833 953</p>
+                    <p class="text"> Website: https://portfolio-vth.vercel.app</p>
+                </div>
+    
+                <div class="contact-form"
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+                >
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+    
+                    <form action="" autocomplete="off">
+                        <h3 class="title">contact us</h3>
+    
+                        <div class="input-container">
+                            <input type="text" name="name" class="input" />
+                            <label for="">Username</label>
+                            <span>Username</span>
+                        </div>
+    
+                        <div class="input-container">
+                            <input type="email" name="email" class="input" />
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+    
+                        <div class="input-container">
+                            <input type="tel" name="phone" class="input" />
+                            <label for="">Phone</label>
+                            <span>Phone</span>
+                        </div>
+    
+                        <div class="input-container textarea">
+                            <textarea name="message" class="input" cols="40" rows="5"></textarea>
+                            <label for="">Message</label>
+                            <span>Message</span>
+                        </div>
+    
+                        <input type="submit" value="Send" class="btn-ctn" />
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -304,12 +367,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-    <!-- <script>
+    <script>
         AOS.init({
             duration: 800,
             delay: 300
         });
-    </script> -->
+    </script>
 
     <script src="/main.js"></script>
 </body>

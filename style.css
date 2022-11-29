@@ -95,8 +95,13 @@ section {
 }
 
 .theme.active {
-  height: 18rem;
+  height: 15rem;
   border-top: 1px solid var(--white);
+}
+
+#menu-bars:hover,
+#theme-toggler:hover {
+  color: var(--black);
 }
 
 .bg {
@@ -179,6 +184,7 @@ section {
 
 .btn-ctn {
   box-shadow: var(--box-shadow);
+  border-radius: 2.2rem;
 }
 
 .btn-ctn:hover {
@@ -219,6 +225,10 @@ header .logo span {
   text-transform: uppercase;
 }
 
+header .navbar {
+  width: 75%;
+}
+
 header .navbar a {
   display: block;
   font-size: 2rem;
@@ -227,6 +237,7 @@ header .navbar a {
   text-transform: capitalize;
 }
 
+header .navbar a.active,
 header .navbar a:hover {
   letter-spacing: .2rem;
   color: var(--mint);
@@ -509,7 +520,6 @@ header .share a:hover {
   background: var(--white);
   border-radius: .5rem;
 }
-
 .portfolio .box-container .box img {
   height: 100%;
   width: 100%;
@@ -542,10 +552,11 @@ header .share a:hover {
 
 .portfolio .box-container .box .icons {
   position: absolute;
-  top: 1rem;
+  top: 3rem;
   right: 1rem;
 }
 
+.portfolio .box-container .box .icons button,
 .portfolio .box-container .box .icons p,
 .portfolio .box-container .box .icons a {
   display: block;
@@ -561,17 +572,19 @@ header .share a:hover {
   cursor: pointer;
 }
 
+.portfolio .box-container .box .icons button:hover,
 .portfolio .box-container .box .icons p:hover,
 .portfolio .box-container .box .icons a:hover {
   background: var(--mint);
   color: var(--white);
 }
 
-#contact {
+.contact {
   position: relative;
   width: 100%;
   overflow: hidden;
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
 }
@@ -579,12 +592,11 @@ header .share a:hover {
 .form {
   width: 100%;
   background-color: var(--white);
-  border-radius: 10px;
+  border-radius: 1rem;
   box-shadow: var(--box-shadow);
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  opacity: 0.8;
 }
 
 .contact-form {
@@ -656,13 +668,13 @@ form {
   color: var(--white);
   font-size: 1.6rem;
   letter-spacing: 0.5px;
-  border-radius: 25px;
+  border-radius: 2.5rem;
   transition: 0.3s;
 }
 
 textarea.input {
   padding: 0.8rem 1.2rem;
-  border-radius: 22px;
+  border-radius: 2.2rem;
   resize: none;
   overflow-y: auto;
 }
